@@ -38,47 +38,39 @@ COMPUTE-PREFIX-FUNCTION(P)
     return pi
 """
 
-
-# define kmp_matcher function
-def kmp_matcher(text, pattern):
-    n = len(text)
-    m = len(pattern)
-    pi = compute_prefix_function(pattern)
+def kmp_matcher(T, P):
+    n = len(T)
+    m = len(P)
+    pi = compute_prefix_function(P)
     q = 0
     for i in range(n):
-        while q > 0 and pattern[q] != text[i]:
+        while q > 0 and P[q] != T[i]:
             q = pi[q]
-        if pattern[q] == text[i]:
+        if P[q] == T[i]:
             q = q + 1
         if q == m:
             print("Pattern occurs with shift", i - m + 1)
             q = pi[q - 1]
 
-
-# define compute_prefix_function function
-def compute_prefix_function(pattern):
-    m = len(pattern)
+def compute_prefix_function(P):
+    m = len(P)
     pi = [0] * m
     k = 0
     for q in range(1, m):
-        while k > 0 and pattern[k] != pattern[q]:
+        while k > 0 and P[k] != P[q]:
             k = pi[k]
-        if pattern[k] == pattern[q]:
+        if P[k] == P[q]:
             k = k + 1
         pi[q] = k
     return pi
 
-
-# define naive_string_matcher function
-def naive_string_matcher(text, pattern):
-    n = len(text)
-    m = len(pattern)
+def naive_string_matcher(T, P):
+    n = len(T)
+    m = len(P)
     for s in range(n - m + 1):
-        if pattern == text[s:s + m]:
+        if P == T[s:s + m]:
             print("Pattern occurs with shift", s)
 
-
-# define main function
 def main():
     text = "acaabcabacabacacdc"
     pattern = "abacab"
@@ -86,3 +78,6 @@ def main():
     naive_string_matcher(text, pattern)
     print("KMP Matcher:")
     kmp_matcher(text, pattern)
+
+if __name__ == "__main__":
+    main()
