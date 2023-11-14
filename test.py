@@ -2,6 +2,8 @@
 
 import time
 import algorithms
+import matplotlib.pyplot as plt
+
 
 # Function to compare KMP and Naive algorithms
 def compare_algorithms(text, pattern):
@@ -18,10 +20,11 @@ def compare_algorithms(text, pattern):
 
     return naive_time, kmp_time, naive_result, kmp_result
 
+
 # Function to test the algorithms
 def test_algorithms():
 
-    test_cases = [
+    test_cases_1 = [
         # TODO - check tests' comments
 
         # Test case 1: Basic test with a simple pattern.
@@ -86,68 +89,170 @@ def test_algorithms():
     ]
 
     test_cases_2 = [
-        # FIXME - tests' comments are not correct
+        # TODO - check tests' comments
 
-        # Test case 1: Pattern occurs at the beginning, Naive is faster.
-        ("patternabacabac", "pattern"),  # Pattern at the beginning of the text.
+        # Test case 1: Pattern at the beginning of the text.
+        ("patternabacabac", "pattern"),
 
-        # Test case 2: Pattern occurs at the end, Naive is faster.
-        ("abacabacpattern", "pattern"),  # Pattern at the end of the text.
+        # Test case 2: Pattern at the end of the text.
+        ("abacabacpattern", "pattern"),
 
-        # Test case 3: Both algorithms perform similarly, alternating pattern and text.
-        ("abacababacabacababacab", "abacab"),  # Alternating pattern and text.
+        # Test case 3: Alternating pattern and text.
+        ("abacababacabacababacab", "abacab"),
 
-        # Test case 4: Naive performs better, unbalanced text.
-        ("abababababababababababababababab", "abababababab"),  # Unbalanced text.
+        # Test case 4: Unbalanced text.
+        ("abababababababababababababababab", "abababababab"),
 
-        # Test case 5: KMP is faster, large text.
-        ("a" * 1000000 + "b" * 5000, "b" * 5000),  # Large text with pattern at the end.
+        # Test case 5: Large text with pattern at the end.
+        ("a" * 1000000 + "b" * 5000, "b" * 5000),
 
-        # Test case 6: Both algorithms perform similarly, complex pattern.
-        ("a" * 1000000 + "ab" * 25000 + "a" * 1000000, "ab" * 25000),  # Large text with complex pattern.
+        # Test case 6: Large text with complex pattern.
+        ("a" * 1000000 + "ab" * 25000 + "a" * 1000000, "ab" * 25000),
 
-        # Test case 7: Naive performs better, a simpler pattern.
-        ("ab" * 1000000, "abab"),  # Large text with a simpler pattern.
+        # Test case 7: Large text with a simpler pattern.
+        ("ab" * 1000000, "abab"),
 
-        # Test case 8: Both algorithms perform similarly, no pattern.
-        ("abcdefghijklmnopqrstuvwxyz", "12345"),  # No pattern in the text.
+        # Test case 8: No pattern in the text.
+        ("abcdefghijklmnopqrstuvwxyz", "12345"),
 
-        # Test case 9: KMP is faster, pattern occurs multiple times.
-        ("abcabcabcabcabc", "abc")   # Pattern occurs multiple times.
+        # Test case 9: Pattern occurs multiple times.
+        ("abcabcabcabcabc", "abc"),
+
+        # Test case 10: Long text with a randomized complex pattern.
+        ("abcdefghijklmnopqrstuwxyz" * 20000, "pqrs" * 5000 + "uvwxyz" * 5000),
+
+        # Test case 11: Long text with an alternating pattern.
+        ("0101010101" * 100000, "01" * 50000),
+
+        # Test case 12: Long text with an overlapping pattern.
+        ("abcdefgh" * 50000, "abcd" * 25000),
+
+        # Test case 13: Long text with a complex pattern.
+        ("a1b2c3d4e5f6g7h8i9j0" * 5000, "12345" * 1000 + "j0" * 1000),
+
+        # Test case 14: Long text with a complex pattern.
+        ("!@#$%^&*()_+=" * 25000, "!@#$" * 5000),
+
+        # Test case 15: Long text with a repeating pattern.
+        ("abcdefgh" * 100000, "abcdefgh" * 50000),
+
+        # Test case 16: Large text with a randomized complex pattern.
+        ("0123456789" * 200000, "56789" * 40000 + "23456" * 40000),
+
+        # Test case 17: Large text with pattern at the end.
+        ("a" * 1000000 + "b" * 5000, "b" * 5000),
+
+        # Test case 18: Large text with complex pattern.
+        ("a" * 1000000 + "ab" * 25000 + "a" * 1000000, "ab" * 25000),
+
+        # Test case 19: Large text with a simpler pattern.
+        ("ab" * 1000000, "abab"),
+
+        # Test case 20: Large text with a complex pattern at the end.
+        ("a" * 1000000 + "ab" * 25000 + "a" * 1000000, "ab" * 25000),
+
+        # Test case 21: Large text with a simple pattern.
+        ("ab" * 1000000, "abab"),
+
+        # Test case 22: Long text with a randomized complex pattern at the beginning.
+        ("0123456789" * 200000, "01234" * 40000),
+
+        # Test case 23: Large text with a complex pattern at the end.
+        ("abcdefghijklmnopqrstuvwxyz" * 50000, "uvwxyz" * 10000),
+
+        # Test case 24: Long text with a randomized complex pattern in the middle.
+        ("abcdefghijklmnopqrstuwxyz" * 100000, "pqrs" * 25000 + "uvwxyz" * 25000),
+
+        # Test case 25: Long text with an alternating pattern.
+        ("0101010101" * 50000, "01" * 25000)
+
     ]
 
-    for i, (text, pattern) in enumerate(test_cases):
+    # Times for the first part of the assignment (test cases 1)
+    naive_times_test_cases_1 = []
+    kmp_times_test_cases_1 = []
+
+    for i, (text, pattern) in enumerate(test_cases_1):
         # Compare the performance of Naive and KMP algorithms for a specific test case
         naive_time, kmp_time, naive_result, kmp_result = compare_algorithms(text, pattern)
 
+        # Store the execution times
+        naive_times_test_cases_1.append(naive_time)
+        kmp_times_test_cases_1.append(kmp_time)
+
         # Print the results
-        print("--------------------------------------------------")
-        print()
+        print("--------------------------------------------------\n")
+
         print(f"Test Case {i + 1}")
         print(f"Text: {text}")
         print(f"Pattern: {pattern}")
+
+        # Naive String Matcher:
         print("Naive String Matcher:")
         print(f"\tTime: {naive_time} seconds")
         print(f"\tOccurrences: {naive_result}")
+
+        # KMP Matcher:
         print("KMP Matcher:")
         print(f"\tTime: {kmp_time} seconds")
-        print(f"\tOccurrences: {kmp_result}")
-        print()
+        print(f"\tOccurrences: {kmp_result}\n")
+
+    # Times for the second part of the assignment (test cases 2)
+    naive_times_test_cases_2 = []
+    kmp_times_test_cases_2 = []
 
     for i, (text, pattern) in enumerate(test_cases_2):
         # Compare the performance of Naive and KMP algorithms for a specific test case
         naive_time, kmp_time, naive_result, kmp_result = compare_algorithms(text, pattern)
 
+        # Store the execution times
+        naive_times_test_cases_2.append(naive_time)
+        kmp_times_test_cases_2.append(kmp_time)
+
         # Print the results
-        print("--------------------------------------------------")
-        print()
+        print("--------------------------------------------------\n")
+
         print(f"Test Case {i + 1}")
-        #print(f"Text: {text}")
-        #print(f"Pattern: {pattern}")
+        # print(f"Text: {text}")
+        # print(f"Pattern: {pattern}")
+
+        # Naive String Matcher:
         print("Naive String Matcher:")
         print(f"\tTime: {naive_time} seconds")
-        #print(f"\tOccurrences: {naive_result}")
+        print(f"\tNum of occurrences: {len(naive_result)}")
+
+        # KMP Matcher:
         print("KMP Matcher:")
         print(f"\tTime: {kmp_time} seconds")
-        #print(f"\tOccurrences: {kmp_result}")
-        print()
+        print(f"\tNum of occurrences: {len(kmp_result)}\n")
+
+    return naive_times_test_cases_1, kmp_times_test_cases_1, naive_times_test_cases_2, kmp_times_test_cases_2
+
+
+# Function to plot the execution time of the algorithms
+def plot_execution_time(naive_time, kmp_time, n_test_cases = 1):
+    # TODO - put some comments
+
+    #
+    test_cases = list(range(1, len(naive_time) + 1))
+
+    #
+    plt.figure(figsize=(10, 6))
+    plt.plot(test_cases, naive_time, marker='o', label='Naive Matcher')
+    plt.plot(test_cases, kmp_time, marker='o', label='KMP Matcher')
+    plt.xlabel('Test Cases')
+    plt.ylabel('Execution Time (seconds)')
+    plt.title('Comparison of Naive and KMP Matcher Execution Times')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+
+    #
+    plt.xticks(test_cases)
+
+    #
+    file_name = 'execution_times_' + str(n_test_cases) + '.png'
+    plt.savefig(file_name)
+
+    #
+    plt.show()
