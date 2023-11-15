@@ -230,13 +230,12 @@ def test_algorithms():
 
 
 # Function to plot the execution time of the algorithms
-def plot_execution_time(naive_time, kmp_time, n_test_cases = 1):
-    # TODO - put some comments
+def plot_execution_time(naive_time, kmp_time, n_test_cases):
 
-    #
+    # Create a list of test cases based on the length of execution times
     test_cases = list(range(1, len(naive_time) + 1))
 
-    #
+    # Create a figure to plot the execution times of both algorithms
     plt.figure(figsize=(10, 6))
     plt.plot(test_cases, naive_time, marker='o', label='Naive Matcher')
     plt.plot(test_cases, kmp_time, marker='o', label='KMP Matcher')
@@ -247,12 +246,12 @@ def plot_execution_time(naive_time, kmp_time, n_test_cases = 1):
     plt.grid(True)
     plt.tight_layout()
 
-    #
+    # Set x-axis ticks to display all test case numbers
     plt.xticks(test_cases)
 
-    #
+    # Save the plot as an image with the specified test case count
     file_name = 'execution_times_' + str(n_test_cases) + '.png'
     plt.savefig(file_name)
 
-    #
+    # Display the plot
     plt.show()

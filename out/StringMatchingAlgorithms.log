@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.15)  23 OCT 2023 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.15)  15 NOV 2023 12:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -82,54 +82,692 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count271
+\float@exts=\toks22
+\float@box=\box52
+\@float@everytoks=\toks23
+\@floatcapt=\box53
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count272
+\lst@gtempboxa=\box54
+\lst@token=\toks24
+\lst@length=\count273
+\lst@currlwidth=\dimen150
+\lst@column=\count274
+\lst@pos=\count275
+\lst@lostspace=\dimen151
+\lst@width=\dimen152
+\lst@newlines=\count276
+\lst@lineno=\count277
+\lst@maxwidth=\dimen153
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count278
+\lst@skipnumbers=\count279
+\lst@framebox=\box55
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen154
+\captionmargin=\dimen155
+\caption@leftmargin=\dimen156
+\caption@rightmargin=\dimen157
+\caption@width=\dimen158
+\caption@indent=\dimen159
+\caption@parindent=\dimen160
+\caption@hangindent=\dimen161
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count280
+\c@continuedfloat=\count281
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/2022/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count282
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip52
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count283
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip53
+\skiplinenumber=\skip54
+\skiprule=\skip55
+\skiphlne=\skip56
+\skiptext=\skip57
+\skiplength=\skip58
+\algomargin=\skip59
+\skipalgocfslide=\skip60
+\algowidth=\dimen162
+\inoutsize=\dimen163
+\inoutindent=\dimen164
+\interspacetitleruled=\dimen165
+\interspacealgoruled=\dimen166
+\interspacetitleboxruled=\dimen167
+\algocf@ruledwidth=\skip61
+\algocf@inoutbox=\box56
+\algocf@inputbox=\box57
+\AlCapSkip=\skip62
+\AlCapHSkip=\skip63
+\algoskipindent=\skip64
+\algocf@nlbox=\box58
+\algocf@hangingbox=\box59
+\algocf@untilbox=\box60
+\algocf@skipuntil=\skip65
+\algocf@capbox=\box61
+\algocf@lcaptionbox=\skip66
+\algoheightruledefault=\skip67
+\algoheightrule=\skip68
+\algotitleheightruledefault=\skip69
+\algotitleheightrule=\skip70
+\c@algocfline=\count284
+\c@algocfproc=\count285
+\c@algocf=\count286
+\algocf@algoframe=\box62
+\algocf@algobox=\box63
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count271
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count287
+\l__pdf_internal_box=\box64
 )
 (/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
 orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
 s/out/StringMatchingAlgorithms.aux)
 \openout1 = `StringMatchingAlgorithms.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen168
+\scratchbox=\box65
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen169
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks26
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count294
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+(/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
+orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
+s/out/StringMatchingAlgorithms.toc)
+\tf@toc=\write4
+\openout4 = `StringMatchingAlgorithms.toc'.
+
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+<./images//Figure 1.png, id=11, 236.885pt x 60.225pt>
+File: ./images//Figure 1.png Graphic file (type png)
+<use ./images//Figure 1.png>
+Package pdftex.def Info: ./images//Figure 1.png  used on input line 143.
+(pdftex.def)             Requested size: 180.0pt x 45.7641pt.
+[2]
+./StringMatchingAlgorithms.tex:154: Missing } inserted.
+<inserted text> 
+                }
+l.154                 $
+                       0 \leq s \leq n - m$ \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./StringMatchingAlgorithms.tex:154: Missing $ inserted.
+<inserted text> 
+                $
+l.154                 $0 \leq
+                              s \leq n - m$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:154: Incomplete \ifodd; all text was ignored aft
+er line 154.
+<inserted text> 
+                \fi 
+l.154                 $0 \leq s \leq n - m$ \\
+                                              
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+./StringMatchingAlgorithms.tex:154: Extra \fi.
+\math@cr@@@ ...ef \next@ {&\kern -\alignsep@ }\fi 
+                                                  \next@ \cr 
+l.154                 $0 \leq s \leq n - m$ \\
+                                              
+I'm ignoring this; it doesn't match any \if.
+
+./StringMatchingAlgorithms.tex:154: Undefined control sequence.
+\math@cr@@@ ...t@ {&\kern -\alignsep@ }\fi \next@ 
+                                                  \cr 
+l.154                 $0 \leq s \leq n - m$ \\
+                                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./StringMatchingAlgorithms.tex:154: Missing { inserted.
+<inserted text> 
+                {
+l.154                 $0 \leq s \leq n - m$ \\
+                                              
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./StringMatchingAlgorithms.tex:155: Missing } inserted.
+<inserted text> 
+                }
+l.155                 $
+                       T[s+1..s+m] = P[1..m]$ \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./StringMatchingAlgorithms.tex:155: Incomplete \ifodd; all text was ignored aft
+er line 155.
+<inserted text> 
+                \fi 
+l.155                 $T[s+1..s+m] = P[1..m]$ \\
+                                                
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+./StringMatchingAlgorithms.tex:155: Missing $ inserted.
+<inserted text> 
+                $
+l.155                 $T[s+1..s+m] = P[1..m]$ \\
+                                                
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:155: Extra \fi.
+\math@cr@@@ ...ef \next@ {&\kern -\alignsep@ }\fi 
+                                                  \next@ \cr 
+l.155                 $T[s+1..s+m] = P[1..m]$ \\
+                                                
+I'm ignoring this; it doesn't match any \if.
+
+./StringMatchingAlgorithms.tex:155: Undefined control sequence.
+\math@cr@@@ ...t@ {&\kern -\alignsep@ }\fi \next@ 
+                                                  \cr 
+l.155                 $T[s+1..s+m] = P[1..m]$ \\
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./StringMatchingAlgorithms.tex:155: Missing { inserted.
+<inserted text> 
+                {
+l.155                 $T[s+1..s+m] = P[1..m]$ \\
+                                                
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./StringMatchingAlgorithms.tex:156: Missing } inserted.
+<inserted text> 
+                }
+l.156                 $
+                       T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./StringMatchingAlgorithms.tex:156: Missing $ inserted.
+<inserted text> 
+                $
+l.156                 $T[s+j] = P[j] for (1 \leq
+                                                 j \leq m)$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:156: Incomplete \ifodd; all text was ignored aft
+er line 156.
+<inserted text> 
+                \fi 
+l.156 ... $T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+                                                  
+A forbidden control sequence occurred in skipped text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
+
+./StringMatchingAlgorithms.tex:156: Extra \fi.
+\math@cr@@@ ...ef \next@ {&\kern -\alignsep@ }\fi 
+                                                  \next@ \cr 
+l.156 ... $T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+                                                  
+I'm ignoring this; it doesn't match any \if.
+
+./StringMatchingAlgorithms.tex:156: Undefined control sequence.
+\math@cr@@@ ...t@ {&\kern -\alignsep@ }\fi \next@ 
+                                                  \cr 
+l.156 ... $T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./StringMatchingAlgorithms.tex:156: Missing { inserted.
+<inserted text> 
+                {
+l.156 ... $T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+[3 <./images//Figure 1.png>]
+./StringMatchingAlgorithms.tex:188: Undefined control sequence.
+l.188         \captionabove
+                           {\underline{NAIVE-STRING-MATCHER(T,P)}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./StringMatchingAlgorithms.tex:191: Missing $ inserted.
+<inserted text> 
+                $
+l.191             $n$ \leftarrow
+                                 T.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:191: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191             $n$ \leftarrow T.length\; \\
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:191: Missing $ inserted.
+<inserted text> 
+                $
+l.191             $n$ \leftarrow T.length\; \\
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:192: Missing $ inserted.
+<inserted text> 
+                $
+l.192             $m$ \leftarrow
+                                 P.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:192: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192             $m$ \leftarrow P.length\; \\
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:192: Missing $ inserted.
+<inserted text> 
+                $
+l.192             $m$ \leftarrow P.length\; \\
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:215: Undefined control sequence.
+l.215         \captionabove
+                           {\underline{KMP-MATCHER(T,P)}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./StringMatchingAlgorithms.tex:218: Missing $ inserted.
+<inserted text> 
+                $
+l.218             $n$ \leftarrow
+                                 T.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:218: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218             $n$ \leftarrow T.length\; \\
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:218: Missing $ inserted.
+<inserted text> 
+                $
+l.218             $n$ \leftarrow T.length\; \\
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:219: Missing $ inserted.
+<inserted text> 
+                $
+l.219             $m$ \leftarrow
+                                 P.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:219: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219             $m$ \leftarrow P.length\; \\
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:219: Missing $ inserted.
+<inserted text> 
+                $
+l.219             $m$ \leftarrow P.length\; \\
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:220: Missing $ inserted.
+<inserted text> 
+                $
+l.220             \pi
+                      \leftarrow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:220: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 ...ow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:220: Missing $ inserted.
+<inserted text> 
+                $
+l.220 ...ow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:221: Missing $ inserted.
+<inserted text> 
+                $
+l.221             $q$ \leftarrow
+                                 $0$\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:221: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.221             $q$ \leftarrow $0$\; \\
+                                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:221: Missing $ inserted.
+<inserted text> 
+                $
+l.221             $q$ \leftarrow $0$\; \\
+                                         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[4]
+./StringMatchingAlgorithms.tex:242: Undefined control sequence.
+l.242         \captionabove
+                           {\underline{COMPUTE-PREFIX-FUNCTION(P)}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./StringMatchingAlgorithms.tex:245: Missing $ inserted.
+<inserted text> 
+                $
+l.245             $m$ \leftarrow
+                                 P.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:245: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.245             $m$ \leftarrow P.length\; \\
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:245: Missing $ inserted.
+<inserted text> 
+                $
+l.245             $m$ \leftarrow P.length\; \\
+                                              
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:246: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.246 ...      let $\pi[1..m]$ be a new array\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./StringMatchingAlgorithms.tex:247: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247             $\pi[1] \leftarrow 0$\; \\
+                                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./StringMatchingAlgorithms.tex:248: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.248             $k \leftarrow 0$\; \\
+                                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[5] [6]
 (/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
 orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
 s/out/StringMatchingAlgorithms.aux) ) 
 Here is how much of TeX's memory you used:
- 1121 strings out of 478268
- 18374 string characters out of 5846347
- 308895 words of memory out of 5000000
- 19383 multiletter control sequences out of 15000+600000
- 473268 words of font info for 42 fonts, out of 8000000 for 9000
+ 5885 strings out of 478268
+ 98874 string characters out of 5846347
+ 401722 words of memory out of 5000000
+ 24058 multiletter control sequences out of 15000+600000
+ 476778 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,6n,62p,220b,191s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr17.pfb>
+ 55i,15n,63p,382b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/
+enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
+-super/sfrm1095.pfb>
 Output written on "/Users/eliainnocenti/Library/Mobile Documents/com~apple~Clou
 dDocs/File/UNIFI/Corsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/Strin
-gMatchingAlgorithms/out/StringMatchingAlgorithms.pdf" (1 page, 31118 bytes).
+gMatchingAlgorithms/out/StringMatchingAlgorithms.pdf" (6 pages, 154888 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

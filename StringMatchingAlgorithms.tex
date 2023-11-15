@@ -6,15 +6,44 @@
 
 % Packages
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage[font=small]{caption}
+\usepackage{comment}
+\usepackage[linesnumbered,vlined]{algorithm2e}
 
-%
-\title{String Matching Algorithms}
+% Images path
+\graphicspath{ {./images/} }
+
+% TODO - put a comment
+\renewcommand{\contentsname}{Index}
+\renewcommand{\figurename}{Fig.}
+
+\SetAlgoCaptionSeparator{}
+
+% Style % TODO - check
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% Document intestation
+\title{String Matching Algorithms \\
+       \vspace{0.5em}
+       \large Naive and KMP algorithms implementation and analysis}
 \author{Elia Innocenti}
-\date{Novembre 2023}
-
-% Document
-\begin{document}
-\maketitle
+\date{November 2023}
 
     % Svolgere ed analizzare opportuni esperimenti
     % Scrivere una relazione (in LATEX) che descriva quanto fatto
@@ -68,5 +97,176 @@
         % I risultati di ogni esperimento vanno commentati ed analizzati in modo critico, citando i grafici e le tabelle corrispondenti
         % Nell’analisi si verifica se le ipotesi teoriche vengono verificate con i dati sperimentali
         % Al termine dell’analisi degli esperimenti un paragrafo di conclusioni è spesso utile per sintetizzare i risultati ottenuti
+
+% Document
+\begin{document}
+
+    \maketitle
+    \tableofcontents
+
+    \newpage
+
+    % Introduction
+    \section{Introduction} \label{sec:introduction}
+
+        In this report we would like to compare two algorithms for the \textbf{string-matching problem}, namely the \textbf{naive string-matching algorithm} and the \textbf{Knuth-Morris-Pratt algorithm}.
+
+        \subsection{Hardware and software specifications} \label{subsec:hardware_software}
+
+        Below are the specifications of the machine used to conduct the tests:
+        \begin{itemize}
+            \item \textbf{CPU:} Apple M1 SoC (System on Chip) with an 8-core CPU (4 high-performance and 4 high-efficiency cores), 7-core GPU, and Neural Engine
+            \item \textbf{RAM:} 8GB unified memory
+            \item \textbf{OS:} Sonoma 14.0
+            \item \textbf{Python version:} 3.11
+        \end{itemize}
+
+    % The string matching problem
+    \section{The string matching problem} \label{sec:string_matching_problem}
+
+        \subsection{Definition} \label{subsec:definition}
+
+        The \textbf{string-matching problem} is the problem of finding all occurrences of a pattern $P$ in a text $T$. \\
+
+        We formalize the string-matching problem as follows. \\
+        We assume that the test is an array $T[1..n]$ of length $n$ and that the pattern is an array $P[1..m]$ of length $m \leq n$ .
+        We further assume that the elements of $T$ and $P$ are characters drawn from a finite alphabet $\Sigma$.
+        For example, we may have $\Sigma = \{0, 1\}$ or $\Sigma = \{a, b, c, \dots, z\}$, the set of lowercase English letters.
+        The character arrays $T$ and $P$ are often called strings of character. \\
+
+        In fact, the string-matching problem can also be seen as the problem of finding all valid shifts with which a given pattern $P$ occurs in a text $T$. \\
+
+        \subsection{Example} \label{subsec:example}
+
+        \begin{figure}[H]
+            %\centering
+            \includegraphics[width=0.5\textwidth]{Figure 1}
+            \caption{An example of the string-matching problem.
+                     Given the text $T = abcabaabcabac$ and the pattern $P = abaa$, we want to find all the occurrences of $P$ in $T$.
+                     The pattern occurs only once in $T$, starting at shift $s = 3$.}
+            \label{fig:example} % TODO - check label
+        \end{figure}
+
+        % TODO - align to the left (the system in the page and the equations in the system)
+        \[
+            \left\{
+            \begin{aligned}
+                $0 \leq s \leq n - m$ \\
+                $T[s+1..s+m] = P[1..m]$ \\
+                $T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+            \end{aligned}
+            \right.
+        \]
+
+        \subsection{Practical application} \label{subsec:practical_application}
+
+        String matching algorithms have many practical applications in different fields:
+        \begin{itemize}
+            \item Text search: Find the occurrences of words or phrases within documents or long texts.
+            \item Natural language processing: Analysing text to recognise language patterns, lexical analysis and parsing of texts.
+            \item Computational biology: Analysing DNA, RNA and protein sequences to identify biological patterns and correlations.
+            \item Log and structured text analysis: Recognise patterns in large datasets, such as system logs, sensor records, etc.
+            \item Data filtering and analysis: They allow information to be extracted from large volumes of structured and unstructured data.
+            \item Search engines: Working behind the scenes to identify the most relevant matches between user search queries and content.
+            \item Data compression: Used in compression algorithms to find and replace repeated patterns.
+            \item Computer security: Identify signatures and patterns of attacks by detecting byte sequences or malicious behaviour in data.
+        \end{itemize}
+
+    % The naive string-matching algorithm
+    \section{The naive string-matching algorithm} \label{sec:naive_string_matching_algorithm}
+
+        The naive algorithm finds all valid shifts using a loop that checks the condition $P[1..m] = T[s+1..s+m]$ for each of the $n - m + 1$ values of $s$.
+
+        \subsection{Pseudocode} \label{subsec:naive_pseudocode}
+
+        % Naive algorithm pseudocode
+        \SetAlgorithmName{}{naive_string_matching_algorithm}{}
+        \begin{algorithm}[H] \label{alg:naive_string_matching_algorithm}
+        \SetAlgoLined
+        \KwData{Text $T$ of size $n$ and pattern $P$ of size $m$}
+        \vspace{0.5em}
+        \captionabove{\underline{NAIVE-STRING-MATCHER(T,P)}} \\
+        \vspace{0.5em}
+
+            $n$ \leftarrow T.length\; \\
+            $m$ \leftarrow P.length\; \\
+            \For{$s \leftarrow 0$ \KwTo $n - m$}{
+                \If{$P[1..m] = T[s+1..s+m]$}{
+                    print "Pattern occurs with shift" $s$\;
+                }
+            }
+
+        \end{algorithm}
+
+    % String matching with finite automata
+    \section{String matching with finite automata} \label{sec:string_matching_with_finite_automata}
+
+
+
+    % The Knuth-Morris-Pratt algorithm
+    \section{Knuth-Morris-Pratt algorithm} \label{sec:knuth_morris_pratt_algorithm}
+
+        \subsection{Pseudocode} \label{subsec:kmp_pseudocode}
+
+        % KMP algorithm pseudocode
+        \SetAlgorithmName{}{kmp_string_matching_algorithm}{}
+        \begin{algorithm}[H] \label{alg:kmp_string_matching_algorithm}
+        \SetAlgoLined
+        \KwData{Text $T$ of size $n$ and pattern $P$ of size $m$}
+        \vspace{0.5em}
+        \captionabove{\underline{KMP-MATCHER(T,P)}} \\
+        \vspace{0.5em}
+
+            $n$ \leftarrow T.length\; \\
+            $m$ \leftarrow P.length\; \\
+            \pi \leftarrow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
+            $q$ \leftarrow $0$\; \\
+            \For{$i \leftarrow 1$ \KwTo $n$}{
+                \While{$q > 0$ and $P[q+1] \neq T[i]$}{
+                    $q \leftarrow \pi[q]$\;
+                }
+                \If{$P[q+1] = T[i]$}{
+                    $q \leftarrow q + 1$\;
+                }
+                \If{$q = m$}{
+                    print "Pattern occurs with shift" $i - m$\;
+                    $q \leftarrow \pi[q]$\;
+                }
+            }
+
+        \end{algorithm}
+
+        % Compute prefix function pseudocode
+        \SetAlgorithmName{}{kmp_string_matching_algorithm}{}
+        \begin{algorithm}[H] \label{alg:compute_prefix_function}
+        \SetAlgoLined
+        \vspace{0.5em}
+        \captionabove{\underline{COMPUTE-PREFIX-FUNCTION(P)}} \\
+        \vspace{0.5em}
+
+            $m$ \leftarrow P.length\; \\
+            let $\pi[1..m]$ be a new array\; \\
+            $\pi[1] \leftarrow 0$\; \\
+            $k \leftarrow 0$\; \\
+            \For{$q \leftarrow 2$ \KwTo $m$}{
+                \While{$k > 0$ and $P[k+1] \neq P[q]$}{
+                    $k \leftarrow \pi[k]$\;
+                }
+                \If{$P[k+1] = P[q]$}{
+                    $k \leftarrow k + 1$\;
+                }
+                $\pi[q] \leftarrow k$\;
+            }
+            \Return $\pi$\;
+
+        \end{algorithm}
+
+    % Tests and results
+    \section{Tests and results} \label{sec:tests_and_results}
+
+        \subsection{Expected performances} \label{subsec:expected_performances}
+
+    % Conclusions
+    \section{Conclusions} \label{sec:conclusions}
 
 \end{document}
