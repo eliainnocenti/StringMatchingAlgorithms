@@ -182,7 +182,7 @@
 
         The naive algorithm finds all valid shifts using a loop that checks the condition $P[1..m] = T[s+1..s+m]$ for each of the $n - m + 1$ values of $s$.
 
-        \subsection{Description}\label{subsec:naive_description}
+        \subsection{Description} \label{subsec:naive_description}
 
             % TODO - REWRITE THE SECTION
             The naive string-matching algorithm proceeds sliding a ``template'' containing the pattern over the text, noting for which shifts
@@ -195,20 +195,20 @@
             % Naive algorithm pseudocode
             \SetAlgorithmName{}{naive_string_matching_algorithm}{}
             \begin{algorithm}[H] \label{alg:naive_string_matching_algorithm}
-            \SetAlgoLined
-            \KwData{Text $T$ of size $n$ and pattern $P$ of size $m$}
-            \KwResult{All valid shifts with which $P$ occurs in $T$}
-            \vspace{0.5em}
-            \captionabove{\underline{NAIVE-STRING-MATCHER(T,P)}} \\
-            \vspace{0.5em}
+                \SetAlgoLined
+                \KwData{Text $T$ of size $n$ and pattern $P$ of size $m$}
+                \KwResult{All valid shifts with which $P$ occurs in $T$}
+                \vspace{0.5em}
+                \captionabove{\underline{NAIVE-STRING-MATCHER(T,P)}} \\
+                \vspace{0.5em}
 
-                $n$ \leftarrow T.length\; \\
-                $m$ \leftarrow P.length\; \\
-                \For{$s \leftarrow 0$ \KwTo $n - m$}{
-                    \If{$P[1..m] = T[s+1..s+m]$}{
-                        print "Pattern occurs with shift" $s$\;
+                    $n$ \leftarrow T.length\; \\
+                    $m$ \leftarrow P.length\; \\
+                    \For{$s \leftarrow 0$ \KwTo $n - m$}{
+                        \If{$P[1..m] = T[s+1..s+m]$}{
+                            print "Pattern occurs with shift" $s$\;
+                        }
                     }
-                }
 
             \end{algorithm}
 
@@ -258,56 +258,58 @@
             % KMP algorithm pseudocode
             \SetAlgorithmName{}{kmp_string_matching_algorithm}{}
             \begin{algorithm}[H] \label{alg:kmp_string_matching_algorithm}
-            \SetAlgoLined
-            \KwData{Text $T$ of size $n$ and pattern $P$ of size $m$}
-            \KwResult{All valid shifts with which $P$ occurs in $T$}
-            \vspace{0.5em}
-            \captionabove{\underline{KMP-MATCHER(T,P)}} \\
-            \vspace{0.5em}
+                \SetAlgoLined
+                \KwData{Text $T$ of size $n$ and pattern $P$ of size $m$}
+                \KwResult{All valid shifts with which $P$ occurs in $T$}
+                \vspace{0.5em}
+                \captionabove{\underline{KMP-MATCHER(T,P)}} \\
+                \vspace{0.5em}
 
-                $n$ \leftarrow T.length\; \\
-                $m$ \leftarrow P.length\; \\
-                \pi \leftarrow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
-                $q$ \leftarrow $0$\; \\
-                \For{$i \leftarrow 1$ \KwTo $n$}{
-                    \While{$q > 0$ and $P[q+1] \neq T[i]$}{
-                        $q \leftarrow \pi[q]$\;
+                    $n$ \leftarrow T.length\; \\
+                    $m$ \leftarrow P.length\; \\
+                    \pi \leftarrow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
+                    $q$ \leftarrow $0$\; \\
+                    \For{$i \leftarrow 1$ \KwTo $n$}{
+                        \While{$q > 0$ and $P[q+1] \neq T[i]$}{
+                            $q \leftarrow \pi[q]$\;
+                        }
+                        \If{$P[q+1] = T[i]$}{
+                            $q \leftarrow q + 1$\;
+                        }
+                        \If{$q = m$}{
+                            print "Pattern occurs with shift" $i - m$\;
+                            $q \leftarrow \pi[q]$\;
+                        }
                     }
-                    \If{$P[q+1] = T[i]$}{
-                        $q \leftarrow q + 1$\;
-                    }
-                    \If{$q = m$}{
-                        print "Pattern occurs with shift" $i - m$\;
-                        $q \leftarrow \pi[q]$\;
-                    }
-                }
 
             \end{algorithm}
+
+            \vspace{0.0em}
 
             % Compute prefix function pseudocode
             \SetAlgorithmName{}{kmp_string_matching_algorithm}{}
             \begin{algorithm}[H] \label{alg:compute_prefix_function}
-            \SetAlgoLined
-            \KwData{Pattern $P$ of size $m$}
-            \KwResult{Prefix function $\pi$}
-            \vspace{0.5em}
-            \captionabove{\underline{COMPUTE-PREFIX-FUNCTION(P)}} \\
-            \vspace{0.5em}
+                \SetAlgoLined
+                \KwData{Pattern $P$ of size $m$}
+                \KwResult{Prefix function $\pi$}
+                \vspace{0.5em}
+                \captionabove{\underline{COMPUTE-PREFIX-FUNCTION(P)}} \\
+                \vspace{0.5em}
 
-                $m$ \leftarrow P.length\; \\
-                let $\pi[1..m]$ be a new array\; \\
-                $\pi[1] \leftarrow 0$\; \\
-                $k \leftarrow 0$\; \\
-                \For{$q \leftarrow 2$ \KwTo $m$}{
-                    \While{$k > 0$ and $P[k+1] \neq P[q]$}{
-                        $k \leftarrow \pi[k]$\;
+                    $m$ \leftarrow P.length\; \\
+                    let $\pi[1..m]$ be a new array\; \\
+                    $\pi[1] \leftarrow 0$\; \\
+                    $k \leftarrow 0$\; \\
+                    \For{$q \leftarrow 2$ \KwTo $m$}{
+                        \While{$k > 0$ and $P[k+1] \neq P[q]$}{
+                            $k \leftarrow \pi[k]$\;
+                        }
+                        \If{$P[k+1] = P[q]$}{
+                            $k \leftarrow k + 1$\;
+                        }
+                        $\pi[q] \leftarrow k$\;
                     }
-                    \If{$P[k+1] = P[q]$}{
-                        $k \leftarrow k + 1$\;
-                    }
-                    $\pi[q] \leftarrow k$\;
-                }
-                \Return $\pi$\;
+                    \Return $\pi$\;
 
             \end{algorithm}
 
@@ -336,6 +338,7 @@
 
         \subsection{Time complexity} \label{subsec:naive_kmp_time_complexity}
 
+            % FIXME - TO BE FIXED (aesthetically)
             \begin{table}[H]
                 \centering
                 \resizebox{\textwidth}{!}{
@@ -358,9 +361,15 @@
     % Tests and results
     \section{Tests and results} \label{sec:tests_and_results}
 
+        Tests and results
+
         \subsection{Expected performances} \label{subsec:expected_performances}
+
+            Expected performances
 
     % Conclusions
     \section{Conclusions} \label{sec:conclusions}
+
+        Conclusions
 
 \end{document}

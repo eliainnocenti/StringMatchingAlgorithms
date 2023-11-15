@@ -19,4 +19,4 @@
 \contentsline {subsection}{\numberline {6.2}Time complexity}{8}{}%
 \contentsline {section}{\numberline {7}Tests and results}{8}{}%
 \contentsline {subsection}{\numberline {7.1}Expected performances}{8}{}%
-\contentsline {section}{\numberline {8}Conclusions}{8}{}%
+\contentsline {section}{\numberline {8}Conclusions}{9}{}%
