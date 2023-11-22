@@ -1,5 +1,6 @@
 # test.py
 
+import os
 import time
 import algorithms
 import matplotlib.pyplot as plt
@@ -24,6 +25,9 @@ def compare_algorithms(text, pattern):
 # Function to test the algorithms
 def test_algorithms():
 
+    # TODO - create two python files with test cases as input files
+
+    # Test cases 1 - random tests with small text and pattern
     test_cases_1 = [
         # TODO - check tests' comments
 
@@ -88,6 +92,7 @@ def test_algorithms():
         ("loremipsumdolorsitamet", "ipsumdolor"),
     ]
 
+    # Test cases 2 - random tests with large text and pattern
     test_cases_2 = [
         # TODO - check tests' comments
 
@@ -168,6 +173,22 @@ def test_algorithms():
 
     ]
 
+    # Test cases 3 - tests with the same text of different sizes but same pattern
+    test_cases_3 = [
+
+        ("0123456789" * 200000, "56789" * 40000 + "23456" * 40000)
+
+    ]
+
+    # Test cases 4 - tests with the same text but different patterns
+    test_cases_4 = [
+
+        ("0123456789" * 200000, "56789" * 40000 + "23456" * 40000)
+
+    ]
+
+    # TEST CASES 1
+
     # Times for the first part of the assignment (test cases 1)
     naive_times_test_cases_1 = []
     kmp_times_test_cases_1 = []
@@ -196,6 +217,9 @@ def test_algorithms():
         print("KMP Matcher:")
         print(f"\tTime: {kmp_time} seconds")
         print(f"\tOccurrences: {kmp_result}\n")
+
+
+    # TEST CASES 2
 
     # Times for the second part of the assignment (test cases 2)
     naive_times_test_cases_2 = []
@@ -226,7 +250,71 @@ def test_algorithms():
         print(f"\tTime: {kmp_time} seconds")
         print(f"\tNum of occurrences: {len(kmp_result)}\n")
 
-    return naive_times_test_cases_1, kmp_times_test_cases_1, naive_times_test_cases_2, kmp_times_test_cases_2
+
+    # TEST CASES 3
+
+    # Times for the third part of the assignment (test cases 3)
+    naive_times_test_cases_3 = []
+    kmp_times_test_cases_3 = []
+
+    for i, (text, pattern) in enumerate(test_cases_3):
+        # Compare the performance of Naive and KMP algorithms for a specific test case
+        naive_time, kmp_time, naive_result, kmp_result = compare_algorithms(text, pattern)
+
+        # Store the execution times
+        naive_times_test_cases_3.append(naive_time)
+        kmp_times_test_cases_3.append(kmp_time)
+
+        # Print the results
+        print("--------------------------------------------------\n")
+
+        print(f"Test Case {i + 1}")
+        # print(f"Text: {text}")
+        # print(f"Pattern: {pattern}")
+
+        # Naive String Matcher:
+        print("Naive String Matcher:")
+        print(f"\tTime: {naive_time} seconds")
+        print(f"\tNum of occurrences: {len(naive_result)}")
+
+        # KMP Matcher:
+        print("KMP Matcher:")
+        print(f"\tTime: {kmp_time} seconds")
+        print(f"\tNum of occurrences: {len(kmp_result)}\n")
+
+
+    # TEST CASES 4
+
+    # Times for the fourth part of the assignment (test cases 4)
+    naive_times_test_cases_4 = []
+    kmp_times_test_cases_4 = []
+
+    for i, (text, pattern) in enumerate(test_cases_4):
+        # Compare the performance of Naive and KMP algorithms for a specific test case
+        naive_time, kmp_time, naive_result, kmp_result = compare_algorithms(text, pattern)
+
+        # Store the execution times
+        naive_times_test_cases_4.append(naive_time)
+        kmp_times_test_cases_4.append(kmp_time)
+
+        # Print the results
+        print("--------------------------------------------------\n")
+
+        print(f"Test Case {i + 1}")
+        # print(f"Text: {text}")
+        # print(f"Pattern: {pattern}")
+
+        # Naive String Matcher:
+        print("Naive String Matcher:")
+        print(f"\tTime: {naive_time} seconds")
+        print(f"\tNum of occurrences: {len(naive_result)}")
+
+        # KMP Matcher:
+        print("KMP Matcher:")
+        print(f"\tTime: {kmp_time} seconds")
+        print(f"\tNum of occurrences: {len(kmp_result)}\n")
+
+    return naive_times_test_cases_1, kmp_times_test_cases_1, naive_times_test_cases_2, kmp_times_test_cases_2, naive_times_test_cases_3, kmp_times_test_cases_3, naive_times_test_cases_4, kmp_times_test_cases_4
 
 
 # Function to plot the execution time of the algorithms
@@ -250,8 +338,23 @@ def plot_execution_time(naive_time, kmp_time, n_test_cases):
     plt.xticks(test_cases)
 
     # Save the plot as an image with the specified test case count
+    folder_name = 'out/images'
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+
     file_name = 'execution_times_' + str(n_test_cases) + '.png'
-    plt.savefig(file_name)
+    file_path = os.path.join(os.getcwd(), folder_name, file_name)
+
+    if os.path.exists(file_path):
+        user_response = input("The file already exists. Do you want to replace it? (y/n): ").lower()
+        if user_response == 'y':
+            plt.savefig(file_path)
+            print(f"File overwritten: {file_path}")
+        else:
+            print("File not overwritten.")
+    else:
+        plt.savefig(file_path)
+        print(f"New file saved: {file_path}")
 
     # Display the plot
     plt.show()
