@@ -17,14 +17,13 @@
 % Images path
 \graphicspath{ {./images/} }
 
-% TODO - put a comment
+% Layout settings
 \renewcommand{\contentsname}{Index}
 \renewcommand{\figurename}{Figure}
 \renewcommand{\tablename}{Table}
-
 \SetAlgoCaptionSeparator{}
 
-% Style % TODO - check
+% Style
 \lstdefinestyle{mystyle}{
     basicstyle=\ttfamily\footnotesize,
     breakatwhitespace=false,
@@ -117,11 +116,15 @@
 
             Below are the specifications of the machine used to conduct the tests:
             \begin{itemize}
-                \item \textbf{CPU:} Apple M1 SoC (System on Chip) with an 8-core CPU (4 high-performance and 4 high-efficiency cores), 7-core GPU, and Neural Engine
+                \item \textbf{CPU:} Apple M1 SoC (System on Chip) with an 8-core CPU (4 high-performance and 4 high-efficiency cores), 7-core GPU and Neural Engine
                 \item \textbf{RAM:} 8GB unified memory
                 \item \textbf{OS:} Sonoma 14.0
                 \item \textbf{Python version:} 3.11
             \end{itemize}
+
+        \subsection{References} \label{subsec:references}
+
+            Chapter 32 of the book \textit{Introduction to Algorithms} by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein (Third Edition).
 
     % The string matching problem
     \section{The string matching problem} \label{sec:string_matching_problem}
@@ -130,34 +133,32 @@
 
             The \textbf{string-matching problem} is the problem of finding all occurrences of a pattern $P$ in a text $T$. \\
 
-            We formalize the string-matching problem as follows. \\
+            \noindent We formalize the string-matching problem as follows. \\
             We assume that the test is an array $T[1..n]$ of length $n$ and that the pattern is an array $P[1..m]$ of length $m \leq n$ .
             We further assume that the elements of $T$ and $P$ are characters drawn from a finite alphabet $\Sigma$.
             For example, we may have $\Sigma = \{0, 1\}$ or $\Sigma = \{a, b, c, \dots, z\}$, the set of lowercase English letters.
             The character arrays $T$ and $P$ are often called strings of character. \\
 
-            % FIXME - SOMETHING IS MISSING (shifts)
-
-            The string-matching problem can also be seen as the problem of finding all valid shifts with which a given pattern $P$ occurs in a text $T$. \\
+            \noindent The string-matching problem can also be seen as the problem of finding all valid shifts with which a given pattern $P$ occurs in a text $T$. \\
+            We say that the pattern $P$ occurs with shift $s$ in the text $T$ if $0 \leq s \leq n - m$ and $T[s+1..s+m] = P[1..m]$.
 
         \subsection{Example} \label{subsec:example}
 
             \begin{figure}[H]
-                %\centering
-                \includegraphics[width=0.5\textwidth]{Figure 2.1}
+                \centering
+                \includegraphics[width = 0.7 \textwidth]{Figure 2.1}
                 \caption{An example of the string-matching problem.
                          Given the text $T = abcabaabcabac$ and the pattern $P = abaa$, we want to find all the occurrences of $P$ in $T$.
                          The pattern occurs only once in $T$, starting at shift $s = 3$.}
-                \label{fig:example} % TODO - check label
+                \label{fig:example}
             \end{figure}
 
-            % TODO - align to the left (the system in the page and the equations in the system)
             \[
                 \left\{
                 \begin{aligned}
-                    $0 \leq s \leq n - m$ \\
-                    $T[s+1..s+m] = P[1..m]$ \\
-                    $T[s+j] = P[j] for (1 \leq j \leq m)$ \\
+                    & 0 \leq s \leq n - m \\
+                    & T[s+1..s+m] = P[1..m] \\
+                    & T[s+j] = P[j] \text{ for } (1 \leq j \leq m) \\
                 \end{aligned}
                 \right.
             \]
@@ -184,7 +185,6 @@
 
         \subsection{Description} \label{subsec:naive_description}
 
-            % TODO - REWRITE THE SECTION
             The naive string-matching algorithm proceeds sliding a ``template'' containing the pattern over the text, noting for which shifts
             all of the characters in the template match the corresponding characters in the text. \\
             The for loop consider each possible shift explicitly, and the if-condition implicitly loops to check corresponding characters
@@ -214,44 +214,71 @@
 
         \subsection{Time complexity} \label{subsec:naive_time_complexity}
 
-            % FIXME - THIS IS NOT VALID
-            % TODO - REWRITE THE SECTION
-            The worst-case running time of the naive string-matching algorithm is $\Theta((n - m + 1)m)$, which is $\Theta(nm)$.
-            The worst case occurs when the first $m - 1$ characters of the pattern match the first $m - 1$ characters of the text, but the last characters do not match.
-            In this case, the algorithm performs $n - m + 1$ comparisons, each requiring $m$ character comparisons. \\
+            To analyse the time complexity of the algorithm, we can study separately the case in which the pattern occurs only once within the text and the case in which it occurs several times. \\
+            In the first case we can identify three situations: the case in which the pattern is at the beginning of the text (best-case),
+            the case in which it is at the end of the text (worst-case) and the case in which it is anywhere else in the text (average-case).
 
-            The best-case running time of the naive string-matching algorithm is $\Theta(n)$.
-            The best case occurs when the first character of the pattern does not occur in the text.
-            In this case, the algorithm performs $n - m + 1$ comparisons, each requiring $1$ character comparison. \\
+            \begin{itemize}
+                \item \textbf{Best-case:} the pattern is found immediately at the beginning of the text. In this case the complexity is $\Theta(m)$, where $m$ is the length of the pattern.
+                \item \textbf{Worst-case:} the pattern is found at the end of the text. In this case the complexity is $\Theta((n - m + 1)m)$, where $n$ is the length of the text and $m$ is the length of the pattern.
+                \item \textbf{Average-case:} the pattern is found anywhere else in the text. In this case the complexity is $O((n - m + 1)m)$, where $n$ is the length of the text and $m$ is the length of the pattern.
+            \end{itemize}
 
-            The average-case running time of the naive string-matching algorithm is $\Theta(n)$.
-            The average case occurs when the pattern does not occur in the text.
-            In this case, the algorithm performs $n - m + 1$ comparisons, each requiring $m$ character comparisons.
+            \noindent In the second case, on the other hand, we find only a single case, since the algorithm is forced to view the entire text anyway
+            (this is similar to the worst-case treated in the previous situation). In fact, in this case the complexity is $O((n - m + 1)m)$. \\
 
     % String matching with finite automata
     \section{String matching with finite automata} \label{sec:string_matching_with_finite_automata}
 
-        % TODO - REWRITE THE SECTION
-        Some algorithms implement a finite automata - a simple machine for processing information - that scans the text string $T$ for all occurrences of the pattern $P$.
+        Some algorithms, in order to reduce the time complexity of the matching process, use a finite automaton to implement a \textbf{preprocessing function} that examines the pattern $P$. \\
+        There's in fact a pattern matching technique, the \textbf{string matching with finite automata}, that employs finite automata to efficiently search for occurrences of a given pattern within a larger text.
         These string-matching automata examine each text character exactly once, taking constant time per text character.
-        The matching time used - after preprocessing the pattern to build the automaton - is therefore $\Theta(n)$, where $n$ is the length of the text.
-        The time to build the automaton can be large if $\Sigma$ is large.
+        The matching time used, after preprocessing the pattern to build the automaton, is therefore $\Theta(n)$, where $n$ is the length of the text.
+        Although it is independent of the size of the text, the time to build the automaton can be large if $\Sigma$ is large.
+        In fact, the time to process the pattern using the function $\delta$ is $O(m\lvert\Sigma\rvert)$, where $m$ is the length of the pattern and $\lvert\Sigma\rvert$ is the size of the alphabet. \\
 
-        \subsection{Finite automata}\label{subsec:finite_automata}
+        \subsection{Finite automaton} \label{subsec:finite_automaton}
 
-            Finite automata
+            % TODO - check
+            \noindent \textbf{Concept:}
+            \begin{itemize}
+                \item A finite automaton is a simple machine for processing information, used to recognize patterns within input sequences.
+                \item It's a computational model consisting of a finite set of states and transitions between those states based on input symbols.
+                \item The transition function $\delta$ defines the ways in which one goes from one state to another.
+                \item In this context, it's used to recognize whether the pattern occurs in the text.
+            \end{itemize}
+
+            \noindent \textbf{Process:}
+            \begin{itemize}
+                \item Preprocessing: construct a finite automaton that represents the pattern to be matched.
+                \item Matching: use the finite automaton to scan through the text and identify potential matches.
+            \end{itemize}
+
+            \noindent \textbf{Advantages:}
+            \begin{itemize}
+                \item Efficient for multiple searches of the same pattern within different texts.
+                \item Requires preprocessing only for the pattern.
+            \end{itemize}
+
+            \noindent \textbf{Implementation:}
+            \begin{itemize}
+                \item Construction of Finite Automaton: this involves building a transition function $\delta$ that defines the behavior of the automaton when reading characters of the pattern.
+                \item Matching: traverse the text while updating the automaton's state based on the characters encountered. If the automaton reaches an accepting state, a match is found.
+            \end{itemize}
+
 
     % The Knuth-Morris-Pratt algorithm
     \section{Knuth-Morris-Pratt algorithm} \label{sec:knuth_morris_pratt_algorithm}
 
-        % TODO - REWRITE THE SECTION
-        % TODO - CONNECT THE IDEA OF THE AUTOMATON TO THE KMP ALGORITHM
-        The Knuth-Morris-Pratt algorithm improves the running time of the naive algorithm by using information about the pattern itself to avoid some comparisons.
+        The Knuth-Morris-Pratt algorithm is a string-matching algorithm that uses finite automata to perform string matching.
+        In fact, the Knuth-Morris-Pratt algorithm improves the running time of the naive algorithm by using information about the pattern itself to avoid some comparisons, using a preprocessing function \textbf{$\pi$}. \\
         The key idea is that when a mismatch occurs, the pattern itself contains enough information to determine where the next match could begin, thus bypassing re-examination of previously matched characters.
 
         \subsection{Description}\label{subsec:kmp_description}
 
-            Description
+             It preprocesses the pattern to create a ``failure function'' that determines potential shifts in case of mismatches during pattern matching.
+             This information allows the algorithm to skip unnecessary comparisons, enabling faster pattern identification within the text.
+             The KMP algorithm scans the text, leveraging the failure function to avoid redundant checks, and reports all positions where the pattern is found within the text.
 
         \subsection{Pseudocode} \label{subsec:kmp_pseudocode}
 
@@ -315,61 +342,101 @@
 
         \subsection{Time complexity} \label{subsec:kmp_time_complexity}
 
-            % FIXME - THIS IS NOT VALID
-            % TODO - REWRITE THE SECTION
-            The worst-case running time of the Knuth-Morris-Pratt algorithm is $\Theta(n)$.
-            The worst case occurs when the first character of the pattern does not occur in the text.
-            In this case, the algorithm performs $n$ comparisons, each requiring $1$ character comparison. \\
+            Let us analyse the time complexity of the KMP algorithm by examining the preprocessing and matching phases separately. \\
 
-            The best-case running time of the Knuth-Morris-Pratt algorithm is $\Theta(n)$.
-            The best case occurs when the pattern does not occur in the text.
-            In this case, the algorithm performs $n$ comparisons, each requiring $1$ character comparison. \\
+            \noindent We know that KMP uses a preprocessing function $\pi$, based on the concept of finite automata,
+            but implements it in such a way as to be able to compute the transition function $\delta$ efficiently (``on the fly'' as needed).
+            In fact, since $\pi[1..m]$ is the array in which the values of the function of the same name are saved, and since $\pi[1..m]$ has only $m$ entries,
+            this allows the KMP to save a factor of $\lvert\Sigma\rvert$ in the preprocessing time.
+            The time complexity of the preprocessing function $\pi$ of the KMP is therefore $\Theta(m)$.
 
-            The average-case running time of the Knuth-Morris-Pratt algorithm is $\Theta(n)$.
-            The average case occurs when the pattern does not occur in the text.
-            In this case, the algorithm performs $n$ comparisons, each requiring $1$ character comparison.
+            The time for the matching phase is therefore $\Theta(n)$, as already mentioned in the Section 4 (String matching with finite automata).
+            This is because the preprocessing function allows the algorithm to scroll through the text by examining the characters only once,
+            and consequently the complexity is reduced only to the text size, which is $n$.
 
     % Differences between naive string-matching and KMP algorithms
     \section{Differences between naive string-matching and KMP algorithms} \label{sec:naive_kmp_differences}
 
         \subsection{Preprocessing} \label{subsec:preprocessing}
 
-            Preprocessing
-
-        \subsection{Time complexity} \label{subsec:naive_kmp_time_complexity}
-
-            % FIXME - TO BE FIXED (aesthetically)
             \begin{table}[H]
                 \centering
-                \resizebox{\textwidth}{!}{
-                    \begin{tabular}{|c|c|c|c|c|}
-                        \hhline{~~|---|}
-                        \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} & \multicolumn{3}{c|}{\textbf{Matching time}} \\
+                \begin{tabular}{|c|c|}
+                    \hline
+                    \textbf{Algorithm} & \textbf{Preprocessing time} \\
+                    \hline
+                    Naive & {$0$} \\
+                    \hline
+                    KMP & {$\Theta(m)$} \\
+                    \hline
+                    \end{tabular}
+                \caption{Preprocessing time complexity.}
+                \label{tab:preprocessing_time_complexity}
+            \end{table}
+
+        \subsection{Matching time complexity} \label{subsec:naive_kmp_time_complexity}
+
+            \quad \textbf{Pattern with only one occurrence in the text:}
+
+            \begin{table}[H]
+                \centering
+                    \begin{tabular}{|c|c|c|c|}
+                        \hhline{~|---|}
+                        \multicolumn{1}{c|}{}& \multicolumn{3}{c|}{\textbf{Matching time}} \\
                         \hline
-                        \textbf{Algorithm} & \textbf{Preprocessing time} & \textbf{Worst-case} & \textbf{Best-case} & \textbf{Average-case} \\
+                        \textbf{Algorithm} & \textbf{Worst-case} & \textbf{Best-case} & \textbf{Average-case} \\
                         \hline
-                        Naive & {$0$} & $\Theta((n-m+1)m)$ & $O((n-m+1)m)$ & $O((n-m+1)m)$ \\
+                        Naive & $\Theta((n-m+1)m)$ & $O((n-m+1)m)$ & $O((n-m+1)m)$ \\
                         \hline
-                        KMP & {$\Theta(m)$} & $\Theta(n)$ & $\Theta(n)$ & $\Theta(n)$ \\
+                        KMP & $\Theta(n)$ & $O(n)$ & $O(n)$ \\
                         \hline
                     \end{tabular}
-                }
-                \caption{Time complexity of the naive and KMP algorithms.}
-                \label{tab:naive_kmp_time_complexity}
+                \caption{Matching time complexity (case 1).}
+                \label{tab:matching_time_complexity_1}
+            \end{table}
+
+
+            \noindent \quad \textbf{Pattern with multiple occurrences in the text:}
+
+            \begin{table}[H]
+                \centering
+                \begin{tabular}{|c|c|}
+                    \hline
+                    \textbf{Algorithm} & \textbf{Matching time} \\
+                    \hline
+                    Naive & $\Theta((n-m+1)m)$ \\
+                    \hline
+                    KMP & $\Theta(n)$ \\
+                    \hline
+                \end{tabular}
+                \caption{Matching time complexity (case 2).}
+                \label{tab:matching_time_complexity_2}
             \end{table}
 
     % Tests and results
     \section{Tests and results} \label{sec:tests_and_results}
 
-        Tests and results
+        Tests and results \\
+        % TODO - TO BE WRITTEN
+        - TO BE WRITTEN -
 
         \subsection{Expected performances} \label{subsec:expected_performances}
 
-            Expected performances
+            Expected performances \\
+            % TODO - TO BE WRITTEN
+            - TO BE WRITTEN -
+
+        \subsection{Results} \label{subsec:results}
+
+            Results \\
+            % TODO - TO BE WRITTEN
+            - TO BE WRITTEN -
 
     % Conclusions
     \section{Conclusions} \label{sec:conclusions}
 
-        Conclusions
+        Conclusions \\
+        % TODO - TO BE WRITTEN
+        - TO BE WRITTEN -
 
 \end{document}
