@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.15)  22 NOV 2023 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.15)  23 NOV 2023 12:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,7 +228,7 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 )
 (/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
 orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
-s/out/StringMatchingAlgorithms.aux)
+s/out/tex/StringMatchingAlgorithms.aux)
 \openout1 = `StringMatchingAlgorithms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
@@ -274,7 +274,7 @@ Package caption Info: End \AtBeginDocument code.
 
 (/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
 orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
-s/out/StringMatchingAlgorithms.toc [1
+s/out/tex/StringMatchingAlgorithms.toc [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write4
@@ -290,12 +290,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--141
 
  []
 
-<./images//Figure 2.1.png, id=14, 236.885pt x 60.225pt>
-File: ./images//Figure 2.1.png Graphic file (type png)
-<use ./images//Figure 2.1.png>
-Package pdftex.def Info: ./images//Figure 2.1.png  used on input line 149.
+<./resources/images//Figure 2.1.png, id=14, 236.885pt x 60.225pt>
+File: ./resources/images//Figure 2.1.png Graphic file (type png)
+<use ./resources/images//Figure 2.1.png>
+Package pdftex.def Info: ./resources/images//Figure 2.1.png  used on input line
+ 149.
 (pdftex.def)             Requested size: 251.9989pt x 64.06975pt.
-[3] [4 <./images//Figure 2.1.png>]
+[3] [4 <./resources/images//Figure 2.1.png>]
 ./StringMatchingAlgorithms.tex:202: Undefined control sequence.
 l.202                 \captionabove
                                    {\underline{NAIVE-STRING-MATCHER(T,P)}} \\
@@ -584,32 +585,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--346
 [9] [10] [11]
 (/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
 orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
-s/out/StringMatchingAlgorithms.aux) ) 
+s/out/tex/StringMatchingAlgorithms.aux) ) 
 Here is how much of TeX's memory you used:
  5936 strings out of 478268
- 100020 string characters out of 5846347
- 403320 words of memory out of 5000000
+ 100136 string characters out of 5846347
+ 403330 words of memory out of 5000000
  24104 multiletter control sequences out of 15000+600000
  476778 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,63p,382b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/
-enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
--super/sfrm1095.pfb>
+{/usr/local/texlive/2022/texmf-dist/fo
+nts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1095.pfb>
 Output written on "/Users/eliainnocenti/Library/Mobile Documents/com~apple~Clou
 dDocs/File/UNIFI/Corsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/Strin
-gMatchingAlgorithms/out/StringMatchingAlgorithms.pdf" (11 pages, 170167 bytes).
-
+gMatchingAlgorithms/out/tex/StringMatchingAlgorithms.pdf" (11 pages, 170174 byt
+es).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream

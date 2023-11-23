@@ -25,7 +25,7 @@ def compare_algorithms(text, pattern):
 # Function to test the algorithms
 def test_algorithms():
 
-    # TODO - create two python files with test cases as input files
+    # TODO - create the python files with test cases as input files
 
     # Test cases 1 - random tests with small text and pattern
     test_cases_1 = [
@@ -176,14 +176,14 @@ def test_algorithms():
     # Test cases 3 - tests with the same text of different sizes but same pattern
     test_cases_3 = [
 
-        ("0123456789" * 200000, "56789" * 40000 + "23456" * 40000)
+        # TODO - create tests
 
     ]
 
     # Test cases 4 - tests with the same text but different patterns
     test_cases_4 = [
 
-        ("0123456789" * 200000, "56789" * 40000 + "23456" * 40000)
+        # TODO - create tests
 
     ]
 
