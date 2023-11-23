@@ -225,7 +225,7 @@
             \end{itemize}
 
             \noindent In the second case, on the other hand, we find only a single case, since the algorithm is forced to view the entire text anyway
-            (this is similar to the worst-case treated in the previous situation). In fact, in this case the complexity is $O((n - m + 1)m)$. \\
+            (this is similar to the worst-case treated in the previous situation). In fact, in this case the complexity is $\Theta((n - m + 1)m)$. \\
 
     % String matching with finite automata
     \section{String matching with finite automata} \label{sec:string_matching_with_finite_automata}
@@ -384,11 +384,11 @@
                         \hhline{~|---|}
                         \multicolumn{1}{c|}{}& \multicolumn{3}{c|}{\textbf{Matching time}} \\
                         \hline
-                        \textbf{Algorithm} & \textbf{Worst-case} & \textbf{Best-case} & \textbf{Average-case} \\
+                        \textbf{Algorithm} & \textbf{Best-case} & \textbf{Worst-case} & \textbf{Average-case} \\
                         \hline
-                        Naive & $\Theta((n-m+1)m)$ & $O((n-m+1)m)$ & $O((n-m+1)m)$ \\
+                        Naive & $\Theta(m)$ & $\Theta((n-m+1)m)$ & $O((n-m+1)m)$ \\
                         \hline
-                        KMP & $\Theta(n)$ & $O(n)$ & $O(n)$ \\
+                        KMP & $\Theta(m)$ & $\Theta(n)$ & $O(n)$ \\ % TODO - check KMP best-case
                         \hline
                     \end{tabular}
                 \caption{Matching time complexity (case 1).}
