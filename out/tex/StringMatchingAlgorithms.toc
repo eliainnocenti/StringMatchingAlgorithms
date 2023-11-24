@@ -21,4 +21,8 @@
 \contentsline {section}{\numberline {7}Tests and results}{10}{}%
 \contentsline {subsection}{\numberline {7.1}Expected performances}{10}{}%
 \contentsline {subsection}{\numberline {7.2}Results}{11}{}%
+\contentsline {subsection}{\numberline {7.3}Random tests}{11}{}%
+\contentsline {subsection}{\numberline {7.4}Tests with the same text of different sizes but same pattern in every test case}{11}{}%
+\contentsline {subsection}{\numberline {7.5}Tests with the same text but different patterns}{11}{}%
+\contentsline {subsection}{\numberline {7.6}Tests with an entire chapter of a book as text and a word as pattern}{11}{}%
 \contentsline {section}{\numberline {8}Conclusions}{11}{}%
