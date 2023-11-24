@@ -46,5 +46,5 @@ kmp_execution_times_3_1   = (139.7768108844757, 139.79646897315980, 141.29043984
 
 # Test 4_1
 
-naive_execution_times_4_1 = (0.0034551620483398438)
-kmp_execution_times_4_1 = (0.0022449493408203125)
+naive_execution_times_4_1 = (0.0034551620483398438, )
+kmp_execution_times_4_1 = (0.0022449493408203125, )
