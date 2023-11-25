@@ -178,7 +178,6 @@
 
         \subsection{Practical application} \label{subsec:practical_application}
 
-            % TODO - check
             String matching algorithms have many practical applications in different fields:
             \begin{itemize}
                 \item Text search: Find the occurrences of words or phrases within documents or long texts.
@@ -254,7 +253,6 @@
 
         \subsection{Finite automaton} \label{subsec:finite_automaton}
 
-            % TODO - check
             \noindent \textbf{Concept:}
             \begin{itemize}
                 \item A finite automaton is a simple machine for processing information, used to recognize patterns within input sequences.
@@ -405,7 +403,7 @@
                         \hline
                         Naive & $\Theta(m)$ & $\Theta((n-m+1)m)$ & $O((n-m+1)m)$ \\
                         \hline
-                        KMP & $\Theta(m)$ & $\Theta(n)$ & $O(n)$ \\ % TODO - check KMP best-case
+                        KMP & $\Theta(m)$ & $\Theta(n)$ & $O(n)$ \\
                         \hline
                     \end{tabular}
                 \caption{Matching time complexity (case 1).}
@@ -540,8 +538,7 @@
                             \hline
                             13 & "a1b2c3d4e5f6g7h8i9j0" * 5000 & 100000 & "12345" * 1000 + "j0" * 1000 & 7000 \\
                             \hline
-                            14 & "!@#\$\%\^\&*()\_+=" * 25000 & 325000 & "!@#\$" * 5000 & 20000 \\ % FIXME
-                            %14 & \begin{verbatim}"!@#$%^&*()_+=" * 25000\end{verbatim} & 325000 & \begin{verbatim}"!@#$" * 5000\end{verbatim} & 20000 \\
+                            14 & "!@#\$\%\^\&*()\_+=" * 25000 & 325000 & "!@#\$" * 5000 & 20000 \\
                             \hline
                             15 & "abcdefgh" * 100000 &800000  & "abcdefgh" * 50000 & 400000 \\
                             \hline

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.15)  25 NOV 2023 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.15)  25 NOV 2023 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,8 +569,8 @@ Package pdftex.def Info: ./resources/images//Figure 2.1.png  used on input line
 [2
 
 ] [3 <./resources/images//Figure 2.1.png>]
-./StringMatchingAlgorithms.tex:217: Undefined control sequence.
-l.217                 \captionabove
+./StringMatchingAlgorithms.tex:216: Undefined control sequence.
+l.216                 \captionabove
                                    {\underline{NAIVE-STRING-MATCHER(T,P)}} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -578,11 +578,40 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+./StringMatchingAlgorithms.tex:219: Missing $ inserted.
+<inserted text> 
+                $
+l.219                     $n$ \leftarrow
+                                         T.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:219: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 ...             $n$ \leftarrow T.length\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:219: Missing $ inserted.
+<inserted text> 
+                $
+l.219 ...             $n$ \leftarrow T.length\; \\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ./StringMatchingAlgorithms.tex:220: Missing $ inserted.
 <inserted text> 
                 $
-l.220                     $n$ \leftarrow
-                                         T.length\; \\
+l.220                     $m$ \leftarrow
+                                         P.length\; \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -593,7 +622,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.220 ...             $n$ \leftarrow T.length\; \\
+l.220 ...             $m$ \leftarrow P.length\; \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -602,59 +631,30 @@ or  <return>  to continue without it.
 ./StringMatchingAlgorithms.tex:220: Missing $ inserted.
 <inserted text> 
                 $
-l.220 ...             $n$ \leftarrow T.length\; \\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./StringMatchingAlgorithms.tex:221: Missing $ inserted.
-<inserted text> 
-                $
-l.221                     $m$ \leftarrow
-                                         P.length\; \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./StringMatchingAlgorithms.tex:221: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.221 ...             $m$ \leftarrow P.length\; \\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./StringMatchingAlgorithms.tex:221: Missing $ inserted.
-<inserted text> 
-                $
-l.221 ...             $m$ \leftarrow P.length\; \\
+l.220 ...             $m$ \leftarrow P.length\; \\
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--244
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 248--254
+Underfull \hbox (badness 10000) in paragraph at lines 247--253
 
  []
 
 
-Overfull \hbox (3.76805pt too wide) in paragraph at lines 268--269
+Overfull \hbox (3.76805pt too wide) in paragraph at lines 266--267
 []\OT1/cmr/m/n/10.95 Preprocessing: con-struct a fi-nite au-toma-ton that rep-r
 e-sents the pat-tern to be matched. 
  []
 
 [5]
-./StringMatchingAlgorithms.tex:307: Undefined control sequence.
-l.307                 \captionabove
+./StringMatchingAlgorithms.tex:305: Undefined control sequence.
+l.305                 \captionabove
                                    {\underline{KMP-MATCHER(T,P)}} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -662,11 +662,69 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+./StringMatchingAlgorithms.tex:308: Missing $ inserted.
+<inserted text> 
+                $
+l.308                     $n$ \leftarrow
+                                         T.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:308: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.308 ...             $n$ \leftarrow T.length\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:308: Missing $ inserted.
+<inserted text> 
+                $
+l.308 ...             $n$ \leftarrow T.length\; \\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./StringMatchingAlgorithms.tex:309: Missing $ inserted.
+<inserted text> 
+                $
+l.309                     $m$ \leftarrow
+                                         P.length\; \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:309: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.309 ...             $m$ \leftarrow P.length\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:309: Missing $ inserted.
+<inserted text> 
+                $
+l.309 ...             $m$ \leftarrow P.length\; \\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ./StringMatchingAlgorithms.tex:310: Missing $ inserted.
 <inserted text> 
                 $
-l.310                     $n$ \leftarrow
-                                         T.length\; \\
+l.310                     \pi
+                              \leftarrow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -677,7 +735,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.310 ...             $n$ \leftarrow T.length\; \\
+l.310 ...ow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -686,7 +744,7 @@ or  <return>  to continue without it.
 ./StringMatchingAlgorithms.tex:310: Missing $ inserted.
 <inserted text> 
                 $
-l.310 ...             $n$ \leftarrow T.length\; \\
+l.310 ...ow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -694,8 +752,8 @@ you left one out. Proceed, with fingers crossed.
 ./StringMatchingAlgorithms.tex:311: Missing $ inserted.
 <inserted text> 
                 $
-l.311                     $m$ \leftarrow
-                                         P.length\; \\
+l.311                     $q$ \leftarrow
+                                         $0$\; \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -706,8 +764,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.311 ...             $m$ \leftarrow P.length\; \\
-                                                  
+l.311                     $q$ \leftarrow $0$\; \\
+                                                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -715,71 +773,13 @@ or  <return>  to continue without it.
 ./StringMatchingAlgorithms.tex:311: Missing $ inserted.
 <inserted text> 
                 $
-l.311 ...             $m$ \leftarrow P.length\; \\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./StringMatchingAlgorithms.tex:312: Missing $ inserted.
-<inserted text> 
-                $
-l.312                     \pi
-                              \leftarrow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./StringMatchingAlgorithms.tex:312: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.312 ...ow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./StringMatchingAlgorithms.tex:312: Missing $ inserted.
-<inserted text> 
-                $
-l.312 ...ow \text{COMPUTE-PREFIX-FUNCTION(P)}\; \\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./StringMatchingAlgorithms.tex:313: Missing $ inserted.
-<inserted text> 
-                $
-l.313                     $q$ \leftarrow
-                                         $0$\; \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./StringMatchingAlgorithms.tex:313: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.313                     $q$ \leftarrow $0$\; \\
-                                                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./StringMatchingAlgorithms.tex:313: Missing $ inserted.
-<inserted text> 
-                $
-l.313                     $q$ \leftarrow $0$\; \\
+l.311                     $q$ \leftarrow $0$\; \\
                                                  
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./StringMatchingAlgorithms.tex:338: Undefined control sequence.
-l.338                 \captionabove
+./StringMatchingAlgorithms.tex:336: Undefined control sequence.
+l.336                 \captionabove
                                    {\underline{COMPUTE-PREFIX-FUNCTION(P)}} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -787,13 +787,47 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./StringMatchingAlgorithms.tex:341: Missing $ inserted.
+./StringMatchingAlgorithms.tex:339: Missing $ inserted.
 <inserted text> 
                 $
-l.341                     $m$ \leftarrow
+l.339                     $m$ \leftarrow
                                          P.length\; \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:339: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.339 ...             $m$ \leftarrow P.length\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./StringMatchingAlgorithms.tex:339: Missing $ inserted.
+<inserted text> 
+                $
+l.339 ...             $m$ \leftarrow P.length\; \\
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./StringMatchingAlgorithms.tex:340: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.340 ...      let $\pi[1..m]$ be a new array\; \\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 ./StringMatchingAlgorithms.tex:341: LaTeX Error: There's no line here to end.
@@ -802,19 +836,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.341 ...             $m$ \leftarrow P.length\; \\
+l.341 ...               $\pi[1] \leftarrow 0$\; \\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-./StringMatchingAlgorithms.tex:341: Missing $ inserted.
-<inserted text> 
-                $
-l.341 ...             $m$ \leftarrow P.length\; \\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
 
 ./StringMatchingAlgorithms.tex:342: LaTeX Error: There's no line here to end.
@@ -823,87 +849,61 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.342 ...      let $\pi[1..m]$ be a new array\; \\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./StringMatchingAlgorithms.tex:343: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.343 ...               $\pi[1] \leftarrow 0$\; \\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./StringMatchingAlgorithms.tex:344: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.344                     $k \leftarrow 0$\; \\
+l.342                     $k \leftarrow 0$\; \\
                                                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 504--504
+Underfull \hbox (badness 10000) in paragraph at lines 502--502
 []|\OT1/cmr/m/n/10.95 "thisisaverylongtextwith
  []
 
 [9]
-./StringMatchingAlgorithms.tex:568: You can't use `macro parameter character #'
+./StringMatchingAlgorithms.tex:565: You can't use `macro parameter character #'
  in horizontal mode.
 <inserted text> ...000 & 7000 \\ \hline 14 & "!@##
                                                   \$\%\^\&*()\_+=" * 25000 &...
-l.568                         \end{tabularx}
+l.565                         \end{tabularx}
                                             
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./StringMatchingAlgorithms.tex:568: You can't use `macro parameter character #'
+./StringMatchingAlgorithms.tex:565: You can't use `macro parameter character #'
  in horizontal mode.
 <inserted text> ...)\_+=" * 25000 & 325000 & "!@##
                                                   \$" * 5000 & 20000 \\ \hli...
-l.568                         \end{tabularx}
+l.565                         \end{tabularx}
                                             
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./StringMatchingAlgorithms.tex:568: You can't use `macro parameter character #'
+./StringMatchingAlgorithms.tex:565: You can't use `macro parameter character #'
  in horizontal mode.
 <inserted text> ...000 & 7000 \\ \hline 14 & "!@##
                                                   \$\%\^\&*()\_+=" * 25000 &...
-l.568                         \end{tabularx}
+l.565                         \end{tabularx}
                                             
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./StringMatchingAlgorithms.tex:568: You can't use `macro parameter character #'
+./StringMatchingAlgorithms.tex:565: You can't use `macro parameter character #'
  in horizontal mode.
 <inserted text> ...)\_+=" * 25000 & 325000 & "!@##
                                                   \$" * 5000 & 20000 \\ \hli...
-l.568                         \end{tabularx}
+l.565                         \end{tabularx}
                                             
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -911,46 +911,46 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Overfull \hbox (10.01044pt too wide) in paragraph at lines 568--568
+Overfull \hbox (10.01044pt too wide) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "abacababacabacababacab"| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "abababababababababab
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "abcdefghijklmnopqrstu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "abcdefghijklmnopqrstu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "pqrs" * 5000 +
  []
 
-./StringMatchingAlgorithms.tex:568: You can't use `macro parameter character #'
+./StringMatchingAlgorithms.tex:565: You can't use `macro parameter character #'
  in horizontal mode.
 <inserted text> ...000 & 7000 \\ \hline 14 & "!@##
                                                   \$\%\^\&*()\_+=" * 25000 &...
-l.568                         \end{tabularx}
+l.565                         \end{tabularx}
                                             
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
-./StringMatchingAlgorithms.tex:568: You can't use `macro parameter character #'
+./StringMatchingAlgorithms.tex:565: You can't use `macro parameter character #'
  in horizontal mode.
 <inserted text> ...)\_+=" * 25000 & 325000 & "!@##
                                                   \$" * 5000 & 20000 \\ \hli...
-l.568                         \end{tabularx}
+l.565                         \end{tabularx}
                                             
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -958,22 +958,22 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "56789" * 40000 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "abcdefghijklmnopqrstu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "abcdefghijklmnopqrstu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 565--565
 []|\OT1/cmr/m/n/10.95 "pqrs" * 25000 +
  []
 
@@ -982,7 +982,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 568--568
 File: ./out/images/charts/execution_times_1_1.png Graphic file (type png)
 <use ./out/images/charts/execution_times_1_1.png>
 Package pdftex.def Info: ./out/images/charts/execution_times_1_1.png  used on i
-nput line 579.
+nput line 576.
 (pdftex.def)             Requested size: 430.00462pt x 258.00673pt.
 <./out/images/tables/table_execution_times_1_1 (1).png, id=254, 750.55406pt x 3
 83.93437pt>
@@ -990,7 +990,7 @@ File: ./out/images/tables/table_execution_times_1_1 (1).png Graphic file (type
 png)
 <use ./out/images/tables/table_execution_times_1_1 (1).png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_1_1 (1).png 
- used on input line 586.
+ used on input line 583.
 (pdftex.def)             Requested size: 387.00153pt x 197.96567pt.
  [11 <./out/images/charts/execution_times_1_1.png (PNG copy)> <./out/images/tab
 les/table_execution_times_1_1 (1).png>]
@@ -998,7 +998,7 @@ les/table_execution_times_1_1 (1).png>]
 File: ./out/images/charts/execution_times_1_2.png Graphic file (type png)
 <use ./out/images/charts/execution_times_1_2.png>
 Package pdftex.def Info: ./out/images/charts/execution_times_1_2.png  used on i
-nput line 597.
+nput line 594.
 (pdftex.def)             Requested size: 430.00462pt x 258.00673pt.
 <./out/images/tables/table_execution_times_1_2 (1).png, id=263, 773.89125pt x 5
 01.37312pt>
@@ -1006,11 +1006,11 @@ File: ./out/images/tables/table_execution_times_1_2 (1).png Graphic file (type
 png)
 <use ./out/images/tables/table_execution_times_1_2 (1).png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_1_2 (1).png 
- used on input line 604.
+ used on input line 601.
 (pdftex.def)             Requested size: 387.00153pt x 250.72418pt.
  [12 <./out/images/charts/execution_times_1_2.png (PNG copy)> <./out/images/tab
 les/table_execution_times_1_2 (1).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 616--641
+Underfull \hbox (badness 10000) in paragraph at lines 613--638
 []$[]$$[]$
  []
 
@@ -1018,7 +1018,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 616--641
 File: ./out/images/charts/execution_times_2_1.png Graphic file (type png)
 <use ./out/images/charts/execution_times_2_1.png>
 Package pdftex.def Info: ./out/images/charts/execution_times_2_1.png  used on i
-nput line 645.
+nput line 642.
 (pdftex.def)             Requested size: 430.00462pt x 258.00673pt.
 <./out/images/tables/table_execution_times_2_1.png, id=273, 303.1325pt x 177.66
 376pt>
@@ -1026,11 +1026,11 @@ File: ./out/images/tables/table_execution_times_2_1.png Graphic file (type png)
 
 <use ./out/images/tables/table_execution_times_2_1.png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_2_1.png  use
-d on input line 652.
+d on input line 649.
 (pdftex.def)             Requested size: 215.0023pt x 126.01201pt.
 [13 <./out/images/charts/execution_times_2_1.png (PNG copy)> <./out/images/tabl
 es/table_execution_times_2_1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 662--687
+Underfull \hbox (badness 10000) in paragraph at lines 659--684
 []$[]$$[]$
  []
 
@@ -1038,7 +1038,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 662--687
 File: ./out/images/charts/execution_times_2_2.png Graphic file (type png)
 <use ./out/images/charts/execution_times_2_2.png>
 Package pdftex.def Info: ./out/images/charts/execution_times_2_2.png  used on i
-nput line 691.
+nput line 688.
 (pdftex.def)             Requested size: 430.00462pt x 258.00673pt.
 <./out/images/tables/table_execution_times_2_2.png, id=283, 305.14pt x 176.66pt
 >
@@ -1046,11 +1046,11 @@ File: ./out/images/tables/table_execution_times_2_2.png Graphic file (type png)
 
 <use ./out/images/tables/table_execution_times_2_2.png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_2_2.png  use
-d on input line 698.
+d on input line 695.
 (pdftex.def)             Requested size: 215.0023pt x 124.4806pt.
 [14 <./out/images/charts/execution_times_2_2.png (PNG copy)> <./out/images/tabl
 es/table_execution_times_2_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 708--733
+Underfull \hbox (badness 10000) in paragraph at lines 705--730
 []$[]$$[]$
  []
 
@@ -1058,7 +1058,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 708--733
 File: ./out/images/charts/execution_times_2_3.png Graphic file (type png)
 <use ./out/images/charts/execution_times_2_3.png>
 Package pdftex.def Info: ./out/images/charts/execution_times_2_3.png  used on i
-nput line 737.
+nput line 734.
 (pdftex.def)             Requested size: 430.00462pt x 258.00673pt.
 <./out/images/tables/table_execution_times_2_3.png, id=292, 307.1475pt x 177.66
 376pt>
@@ -1066,16 +1066,16 @@ File: ./out/images/tables/table_execution_times_2_3.png Graphic file (type png)
 
 <use ./out/images/tables/table_execution_times_2_3.png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_2_3.png  use
-d on input line 744.
+d on input line 741.
 (pdftex.def)             Requested size: 215.0023pt x 124.36649pt.
 [15 <./out/images/charts/execution_times_2_3.png (PNG copy)> <./out/images/tabl
 es/table_execution_times_2_3.png>]
-Overfull \hbox (14.61458pt too wide) in paragraph at lines 770--779
+Overfull \hbox (14.61458pt too wide) in paragraph at lines 767--776
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 756--781
+Underfull \hbox (badness 10000) in paragraph at lines 753--778
 []$[]$$[]$
  []
 
@@ -1083,7 +1083,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 756--781
 File: ./out/images/charts/execution_times_3_1.png Graphic file (type png)
 <use ./out/images/charts/execution_times_3_1.png>
 Package pdftex.def Info: ./out/images/charts/execution_times_3_1.png  used on i
-nput line 785.
+nput line 782.
 (pdftex.def)             Requested size: 430.00462pt x 258.00673pt.
 <./out/images/tables/table_execution_times_3_1.png, id=301, 308.15125pt x 178.6
 675pt>
@@ -1091,7 +1091,7 @@ File: ./out/images/tables/table_execution_times_3_1.png Graphic file (type png)
 
 <use ./out/images/tables/table_execution_times_3_1.png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_3_1.png  use
-d on input line 792.
+d on input line 789.
 (pdftex.def)             Requested size: 215.0023pt x 124.6629pt.
 [16 <./out/images/charts/execution_times_3_1.png (PNG copy)> <./out/images/tabl
 es/table_execution_times_3_1.png>]
@@ -1128,7 +1128,7 @@ es/table_execution_times_3_1.png>]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--826
+Underfull \hbox (badness 10000) in paragraph at lines 806--823
 []$[]$$[]$
  []
 
@@ -1138,25 +1138,25 @@ File: ./out/images/tables/table_execution_times_4_1.png Graphic file (type png)
 
 <use ./out/images/tables/table_execution_times_4_1.png>
 Package pdftex.def Info: ./out/images/tables/table_execution_times_4_1.png  use
-d on input line 839.
+d on input line 836.
 (pdftex.def)             Requested size: 215.0023pt x 53.57576pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 849--863
+Underfull \hbox (badness 10000) in paragraph at lines 846--860
 
  []
 
-./StringMatchingAlgorithms.tex:866: Missing $ inserted.
+./StringMatchingAlgorithms.tex:863: Missing $ inserted.
 <inserted text> 
                 $
-l.866 ...NCTION(P) (the preprocessing function \pi
+l.863 ...NCTION(P) (the preprocessing function \pi
                                                    \text{ that has complexit...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./StringMatchingAlgorithms.tex:866: Missing $ inserted.
+./StringMatchingAlgorithms.tex:863: Missing $ inserted.
 <inserted text> 
                 $
-l.866 ... \pi \text{ that has complexity } $\Theta
+l.863 ... \pi \text{ that has complexity } $\Theta
                                                   (m)$) and to have a matchi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1167,6 +1167,9 @@ you left one out. Proceed, with fingers crossed.
 (/Users/eliainnocenti/Library/Mobile Documents/com~apple~CloudDocs/File/UNIFI/C
 orsi/Laboratorio di Algoritmi e Strutture Dati/Progetto/StringMatchingAlgorithm
 s/out/tex/StringMatchingAlgorithms.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `StringMatchingAlgorithms.out' has not change
 d.
 (rerunfilecheck)             Checksum: 54A685021935F7B24B502603EBF0824A;5197.

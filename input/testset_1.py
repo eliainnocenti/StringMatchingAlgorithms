@@ -5,7 +5,6 @@
 # Test set 1 - random tests
 
 testset_1_1 = [
-        # TODO - check tests' comments
 
         # Test case 1: Basic test with a simple pattern.
         ("abcdefg", "cd"),
@@ -69,7 +68,6 @@ testset_1_1 = [
 ]
 
 testset_1_2 = [
-        # TODO - check tests' comments
 
         # Test case 1: Pattern at the beginning of the text.
         ("patternabacabac", "pattern"),

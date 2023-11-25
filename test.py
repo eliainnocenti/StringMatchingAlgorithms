@@ -103,8 +103,6 @@ def plot_execution_time_chart(naive_time, kmp_time, n_test):
     file_name = 'execution_times_' + n_test + '.png'
     file_path = os.path.join(os.getcwd(), folder_name, file_name)
 
-    # FIXME - savefig does not work properly (blank image)
-
     if os.path.exists(file_path):
         user_response = input("The file already exists. Do you want to replace it? (y/n): ").lower()
         if user_response == 'y':
@@ -148,19 +146,17 @@ def plot_execution_times_table(naive_time, kmp_time, n_test):
     table_file_name = 'table_execution_times_' + n_test + '.png'
     table_file_path = os.path.join(os.getcwd(), folder_name, table_file_name)
 
-    # FIXME - savefig does not work properly (blank image)
-
     if os.path.exists(table_file_path):
         user_response = input("The file already exists. Do you want to replace it? (y/n): ").lower()
         if user_response == 'y':
             #plt.savefig(table_file_path)
-            plt.savefig(table_file_path, bbox_inches='tight', pad_inches=0.05) # FIXME - reduce white space
+            plt.savefig(table_file_path, bbox_inches='tight', pad_inches=0.05)
             print(f"File overwritten: {table_file_path}")
         else:
             print("File not overwritten.")
     else:
         #plt.savefig(table_file_path)
-        plt.savefig(table_file_path, bbox_inches='tight', pad_inches=0.05) # FIXME - reduce white space
+        plt.savefig(table_file_path, bbox_inches='tight', pad_inches=0.05)
         print(f"New file saved: {table_file_path}")
 
 
