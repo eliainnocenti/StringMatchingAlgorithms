@@ -15,6 +15,7 @@
 \usepackage{hhline}
 \usepackage{geometry}
 \usepackage{tabularx}
+\usepackage{hyperref}
 
 % Images path
 \graphicspath{ {./resources/images/} % images from the book or other sources
@@ -440,15 +441,17 @@
 
         \subsection{Expected performances} \label{subsec:expected_performances}
 
-            Expected performances \\
-            % TODO - TO BE WRITTEN
-            - TO BE WRITTEN -
+            Based on the study of the complexities of the two algorithms (\hyperref[sec:naive_kmp_differences]{Section 6}), we can expect them to perform similarly in test cases with small pattern sizes;
+            this is because the time for the preprocessing phase of the KMP (which is $\Theta(m)$) tends to that of the naive (which is $0$),
+            while the matching time of the naive (which is $\Theta((n-m+1)m)$) tends to that of the KMP (which is $\Theta(n)$).
+            We can also guess that, for the same pattern size, as the text size increases,
+            the time of the matching phase of the naive increases more than that of the KMP, obviously due to their time complexity.
+            Finally, we can expect the KMP to perform better than the naive in test cases with large pattern sizes.
 
         \subsection{Results} \label{subsec:results}
 
-            Results \\
-            % TODO - TO BE WRITTEN
-            - TO BE WRITTEN -
+            Now follows the tests performed.
+            Input data and runtimes are shown, the representation of which is provided both in graphical and tabular form.
 
             \subsubsection{Random tests} \label{subsubsec:tests_1}
 
@@ -537,8 +540,8 @@
                             \hline
                             13 & "a1b2c3d4e5f6g7h8i9j0" * 5000 & 100000 & "12345" * 1000 + "j0" * 1000 & 7000 \\
                             \hline
-                            14 & "!@#\$\%\^\&*()\_+=" * 25000 & 325000 & "!@#$" * 5000 & 20000 \\ % FIXME
-                            %14 & \begin{verbatim}"!@#$%^&*()_+=" * 25000\end{verbatim} &  & \begin{verbatim}"!@#$" * 5000\end{verbatim} &  \\
+                            14 & "!@#\$\%\^\&*()\_+=" * 25000 & 325000 & "!@#\$" * 5000 & 20000 \\ % FIXME
+                            %14 & \begin{verbatim}"!@#$%^&*()_+=" * 25000\end{verbatim} & 325000 & \begin{verbatim}"!@#$" * 5000\end{verbatim} & 20000 \\
                             \hline
                             15 & "abcdefgh" * 100000 &800000  & "abcdefgh" * 50000 & 400000 \\
                             \hline
@@ -793,6 +796,8 @@
 
             \newpage
 
+            \newgeometry{top=2.9cm, bottom=2.8cm}
+
             \subsubsection{Tests with an entire chapter of a book as text and a word as pattern} \label{subsubsec:tests_4}
 
                 % TEST 4_1
@@ -820,12 +825,14 @@
                     \label{tab:test_4_1}
                 \end{table}
 
-                \begin{figure}[H]
-                    \centering
-                    \includegraphics[width = \textwidth]{execution_times_4_1}
-                    \caption{chart test 4\_1}
-                    \label{fig:chart_test_4_1}
-                \end{figure}
+
+                %    \begin{figure}[H]
+                %        \centering
+                %        \includegraphics[width = \textwidth]{execution_times_4_1}
+                %        \caption{chart test 4\_1}
+                %        \label{fig:chart_test_4_1}
+                %    \end{figure}
+
 
                 \begin{figure}[H]
                     \centering
@@ -834,13 +841,31 @@
                     \label{fig:table_test_4_1}
                 \end{figure}
 
-    \newpage
+    %\newpage % to be uncommented if the test 4_1 chart is uncommented -> check even the geometry of the page
 
     % Conclusions
     \section{Tests discussion and conclusions} \label{sec:conclusions}
 
-        Conclusions \\
-        % TODO - TO BE WRITTEN
-        - TO BE WRITTEN -
+        Tests confirm what we expected and each test case gives us information about it. \\
+        In the random tests (\hyperref[subsubsec:tests_1]{Section 7.2.1}) we can see, especially by looking at the graphs (\hyperref[fig:chart_test_1_1]{Fig. 2}, \hyperref[fig:chart_test_1_2]{Fig. 4}) that the largest gap between
+        the execution times of the two algorithms occurs in the test cases where the pattern size is largest,
+        e.g.: in test 1\_1 the test case 20, while in test 1\_2 the test cases 6, 11, 15, 16, 18, 20, 22, 24. \\
+        Examining the tests of the second type (\hyperref[subsubsec:tests_2]{Section 7.2.2}), we can note that in the cases in which the size of the pattern is moderately ``small''
+        (in the tests carried out we speak of the order of hundreds) there is not much difference between
+        the execution times of the naive and the KMP, even as the size of the text increases (the difference remains rather constant,
+        especially in the 2\_1 test (\hyperref[fig:chart_test_2_1]{Fig. 6}), where the times seem to overlap). \\
+        In fact, in tests 2\_2 and 2\_3 (\hyperref[fig:chart_test_2_2]{Fig. 8}, \hyperref[fig:chart_test_2_3]{Fig. 10}), the gap between the execution times of the two algorithms grows considerably as the size of the text increases
+        (in these two tests we speak of a pattern size in the order of thousands in the first test, and in the order of tens of thousands in the second). \\
+        The final confirmation is provided by test 3\_1 (\hyperref[subsubsec:tests_3]{Section 7.2.3}) in which we both vary the pattern on the same text with a set size of 200000000,
+        going from an m = 40 to an m = 400000. In fact, in this test we see how the times of the naive ``explode'' compared to those of the kmp (\hyperref[fig:chart_test_3_1]{Fig. 12}) . \\
+        We then have a ``practice'' test (\hyperref[subsubsec:tests_4]{Section 7.2.4}) in which we test the two algorithms on a chapter of a famous book: the first chapter of ``The Hobbit'' by J.R.R. Tolkien.
+        Here too we see how, given a pattern of rather small size, the two times resemble each other (\hyperref[fig:table_test_4_1]{Fig. 14}). \\
+
+        \noindent In conclusion, we can say that the KMP algorithm is more efficient than the naive algorithm in the case of large pattern sizes,
+        and offers a very good solution when performing numerous tests with the same pattern as the algorithm allows us to keep the result
+        of the COMPUTE-PREFIX-FUNCTION(P) (the preprocessing function \pi \text{ that has complexity } $\Theta(m)$) and to have a matching phase with
+        complexity always equal to $\Theta(n)$ where $n$ is the size of the text.
+
+    \restoregeometry
 
 \end{document}
